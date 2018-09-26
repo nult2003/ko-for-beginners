@@ -22,6 +22,7 @@ $(document).ready(function () {
             viewModel.lookupCollection.push(mappedItem);
         });
         ko.applyBindings(viewModel);
+        $('#customerList').DataTable();
     }).error(function (ex) {
         alert("Error");
     });
@@ -79,5 +80,5 @@ $(document).ready(function () {
         })
     }
 
-    $('#customerList').DataTable();
+    
 });
