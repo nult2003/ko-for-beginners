@@ -21,7 +21,14 @@ namespace KnockoutSamples.Models
         {
         }
 
-        public DbSet<KnockoutSamples.Models.Lookup> Lookups { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Customer>()
+                .Property(e => e.CustomerID)
+                .IsFixedLength();
+        }
 
+        public DbSet<KnockoutSamples.Models.Lookup> Lookups { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
     }
 }

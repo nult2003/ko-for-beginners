@@ -22,7 +22,9 @@ namespace KnockoutSamples.Controllers
 
         public JsonResult GetIndex()
         {
-            return Json(db.Lookups.ToList(), JsonRequestBehavior.AllowGet);
+            var lstItem = db.Customers.ToList();
+            //return Json(db.Lookups.ToList(), JsonRequestBehavior.AllowGet);
+            return Json(lstItem, JsonRequestBehavior.AllowGet);
         }
 
         //

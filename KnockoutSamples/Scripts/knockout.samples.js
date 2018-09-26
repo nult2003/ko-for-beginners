@@ -11,9 +11,12 @@ $(document).ready(function () {
         $(data).each(function (index, element) {
             var mappedItem = 
                 {
-                    Id: ko.observable(element.Id),
-                    Key: ko.observable(element.Key),
-                    Value: ko.observable(element.Value),
+                    //Id: ko.observable(element.Id),
+                    //Key: ko.observable(element.Key),
+                    //Value: ko.observable(element.Value),
+                    CustomerID: ko.observable(element.CustomerID),
+                    CompanyName: ko.observable(element.CompanyName),
+                    ContactName: ko.observable(element.ContactName),
                     Mode: ko.observable("display")
                 };
             viewModel.lookupCollection.push(mappedItem);
@@ -31,6 +34,11 @@ $(document).ready(function () {
     $(document).on("click", ".kout-update", null, function (ev) {
         var current = ko.dataFor(this);
         saveData(current);
+        current.Mode("display");
+    });
+
+    $(document).on("click", ".kout-cancel", null, function (ev) {
+        var current = ko.dataFor(this);        
         current.Mode("display");
     });
     
@@ -71,4 +79,5 @@ $(document).ready(function () {
         })
     }
 
+    $('#customerList').DataTable();
 });

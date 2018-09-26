@@ -4,6 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="../../Assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    @*<link href="../../Assets/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">*@
+    <!-- DataTables CSS -->
+    <link href="../../Assets/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- DataTables Responsive CSS -->
+    <link href="../../Assets/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    @*<link href="../../Assets/dist/css/sb-admin-2.css" rel="stylesheet">*@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -39,6 +48,13 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="../../Assets/vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- DataTables JavaScript -->
+    <script src="../../Assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../../Assets/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../../Assets/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../../Assets/dist/js/sb-admin-2.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
